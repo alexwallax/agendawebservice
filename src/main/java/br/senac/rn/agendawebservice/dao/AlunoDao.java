@@ -54,7 +54,9 @@ public class AlunoDao {
     }
     
     public List<Aluno> selectAll() {
-        return manager.createQuery("SELECT a FROM Aluno a", Aluno.class).getResultList();
+
+        
+        return manager.createQuery("FROM Aluno a", Aluno.class).getResultList();
     }
     
 }
