@@ -23,9 +23,11 @@ public class Teste {
 
         AlunoDao dao =  new AlunoDao();
         
-        Aluno aluno = dao.selectByMatricula(2);
+        System.out.println(dao.selectAll());
         
-        dao.delete(aluno);
+//        Aluno aluno = dao.selectByMatricula(2);
+//        
+//        dao.delete(aluno);
 
         System.exit(0);
 

@@ -5,6 +5,7 @@ import static br.senac.rn.agendawebservice.dao.Operacao.ATUALIZAR;
 import static br.senac.rn.agendawebservice.dao.Operacao.DELETAR;
 import static br.senac.rn.agendawebservice.dao.Operacao.INSERIR;
 import br.senac.rn.agendawebservice.model.Aluno;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -50,6 +51,10 @@ public class AlunoDao {
     
     public Aluno selectByMatricula(Integer matricula) {
         return manager.find(Aluno.class, matricula);
+    }
+    
+    public List<Aluno> selectAll() {
+        return manager.createQuery("SELECT a FROM Aluno a", Aluno.class).getResultList();
     }
     
 }
