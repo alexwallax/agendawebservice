@@ -9,17 +9,18 @@
     
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     
-    <properties>
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/agendaandroiddb"/>
-      <property name="javax.persistence.jdbc.user" value="root"/>   
-      <property name="javax.persistence.jdbc.password" value="senac"/>
-      
-      <property name="hibernate.hbm2ddl.auto" value="update" />
-      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInno" />
-     
-    </properties>
-    
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/agendaDB"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>   
+            <property name="javax.persistence.jdbc.password" value=""/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+
     
   </persistence-unit>
 
