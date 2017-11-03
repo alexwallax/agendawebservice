@@ -1,30 +1,26 @@
-
 package br.senac.rn.agendawebservice.model;
 
 import java.io.Serializable;
 import static java.lang.Integer.compare;
 import java.util.Objects;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name ="tb_alunos")
+@Entity(name = "tb_alunos")
 public class Aluno implements Serializable, Comparable<Aluno> {
-   
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer matricula;
     private String nome;
     private String endereco;
-   // @Column(unique = true)  // nao pode repetir o que fica abaixo no caso o fone
     private String fone;
     private String site;
     private Double nota;
 
-    public Aluno() {
-    }
+    public Aluno() {}
 
     public Aluno(String nome, String endereco, String fone, String site, Double nota) {
         this.nome = nome;
@@ -115,20 +111,6 @@ public class Aluno implements Serializable, Comparable<Aluno> {
     @Override
     public int compareTo(Aluno aluno) {
         return compare(this.matricula, aluno.matricula);
-
-
-
-     
-        
-//        if (this.matricula < aluno.matricula) {
-//            return -1;
-//        } else if (this.matricula > aluno.matricula){
-//            return +1;
-//        } else {
-//            return 0;
-//        }
     }
-    
-    
     
 }
